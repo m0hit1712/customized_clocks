@@ -20,6 +20,9 @@ function Clocks() {
     <section>
       <div className="grid">
         <Clock></Clock>
+        <Clock></Clock>
+        <Clock></Clock>
+        <Clock></Clock>
       </div>
     </section>
   );

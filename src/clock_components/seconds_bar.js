@@ -29,7 +29,7 @@ export const SecondsBar = (properties) => {
   });
 
   return (
-    <MyDiv className="second">
+    <MyDiv className="second" id={properties.id}>
       <InnerMyDiv className="sec"></InnerMyDiv>
     </MyDiv>
   );

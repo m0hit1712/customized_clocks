@@ -28,7 +28,7 @@ export const HoursBar = (properties) => {
 });
 
   return (
-    <MyDiv className="hour">
+    <MyDiv className="hour" id={properties.id}>
       <InnerMyDiv className="hr"></InnerMyDiv>
     </MyDiv>
   );
