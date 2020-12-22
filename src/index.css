@@ -12,14 +12,8 @@ code {
     monospace;
 }
 
-#clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .grid {
-  margin-top: 200px;
+  margin: 40px 40px;
   width: 90vw;
   max-width: 1170px;
   display: grid;

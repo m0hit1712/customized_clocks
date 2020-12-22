@@ -11,7 +11,6 @@ export const ClockBackground = (properties) => {
     border-radius: ${properties.border_radius};
     background-size: cover;
     position: absolute;
-    opacity: ${properties.opacity};
   `;
 
   return <MyDiv id={properties.id} className="clock_background"></MyDiv>;
