@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/simple_white_blossom_clock.css";
 
-export function rotate_clock(hr_s, min_s, sec_s) {
+export function start_clock(hr_s, min_s, sec_s) {
   setInterval(() => {
     const deg = 6;
     const hr = document.querySelectorAll(hr_s);
@@ -25,6 +25,7 @@ export const SimpleWhiteBlossomClock = () => {
   return (
     <div id="renderer">
       <div id="simple_white_blossom_clock" className="clock">
+        <div id="clock_theme_background"></div>
         <div className="hour">
           <div className="hr" id="hr"></div>
         </div>

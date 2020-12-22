@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import {
   SimpleWhiteBlossomClock,
-  rotate_clock,
+  start_clock,
 } from "./clocks/simple_white_blossom_clock";
 
 function Clocks() {
+  setTimeout(start_clock(".hr", ".min", ".sec"), 200);
   return (
     <section>
-      <SimpleWhiteBlossomClock />
-      {setTimeout(rotate_clock(".hr", ".min", ".sec"), 200)};
+      <div className="grid">
+        <SimpleWhiteBlossomClock />
+      </div>
     </section>
   );
 }
