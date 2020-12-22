@@ -38,7 +38,7 @@
   height: 270px;
   border-radius: 50%;
   position: absolute;
-  background: url("../images/blossom_leafs.png");
+  background-color: #1f0844;
   background-size: cover;
   opacity: 0.5;
 }

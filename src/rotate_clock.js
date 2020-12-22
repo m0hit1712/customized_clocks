@@ -1,6 +1,3 @@
-import React from "react";
-import "./css/simple_white_blossom_clock.css";
-
 export function start_clock(hr_s, min_s, sec_s, analog_s) {
   setInterval(() => {
     const deg = 6;
@@ -18,6 +15,7 @@ export function start_clock(hr_s, min_s, sec_s, analog_s) {
       min[i].style.transform = `rotate(${mm}deg)`;
       sec[i].style.transform = `rotate(${ss}deg)`;
     }
+
     if (analog_s) {
       const analog = document.getElementsByClassName(analog_s);
       let ana_hr = day.getHours();
@@ -42,27 +40,3 @@ export function start_clock(hr_s, min_s, sec_s, analog_s) {
     }
   }, 500);
 }
-
-export const SimpleWhiteBlossomClock = () => {
-  return (
-    <div id="renderer">
-      <div id="simple_white_blossom_clock" className="clock">
-        <div id="clock_theme_background"></div>
-        <div className="hour">
-          <div className="hr" id="hr"></div>
-        </div>
-        <div className="minute">
-          <div className="min" id="min"></div>
-        </div>
-        <div className="second">
-          <div className="sec" id="sec"></div>
-        </div>
-        <div className="inner_analog">
-          <div id="analog_hour"></div>
-          <div id="analog_minute"></div>
-          <div id="analog_second"></div>
-        </div>
-      </div>
-    </div>
-  );
-};
