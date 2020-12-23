@@ -8,7 +8,7 @@ import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
 import styled from "styled-components";
 
-export const BlackMultiFunctionalClock = (properties) => {
+export const AncientThemeClock = (properties) => {
   const MyDiv = styled.div`
     height: ${(properties) => properties.height || "300px"};
     width: ${(properties) => properties.width || "300px"};
@@ -21,53 +21,56 @@ export const BlackMultiFunctionalClock = (properties) => {
   `;
 
   return (
-    <MyDiv className="clock" id="black_multi_functional_clock">
+    <MyDiv className="clock" id="ancient_theme_clock">
       <ClockFrame
-        height="200px"
+        height="250px"
         border_radius="50%"
-        width="200px"
-        border_size="10px"
-        border_color="black"
-        shadow
+        width="250px"
+        border_size="0px"
+        image_url="images/ancient_theme_frame.png"
       />
       <ClockBackground
-        height="204px"
+        height="190px"
         border_radius="50%"
-        width="204px"
+        width="190px"
         opacity="1"
-        background_color="black"
+        background_color="transparent"
       />
       <ClockInnerNumberFrame
-        height="200px"
+        height="185px"
         border_radius="50%"
-        width="200px"
-        image_url="images/clock.png"
+        width="185px"
+        background_color="transparent"
+        image_url="images/number_frame_ancient.png"
       />
       <HoursBar
+        outer_height="100px"
+        outer_width="100px"
+        bar_length="50px"
+        bar_thickness="8px"
+        bar_color="#97773E"
+        bar_corner="6px 6px 6px 6px"
+      />
+      <MinutesBar
         outer_height="140px"
         outer_width="140px"
         bar_length="70px"
-        bar_thickness="8px"
-        bar_color="#7E7F89"
-      />
-      <MinutesBar
-        outer_height="160px"
-        outer_width="160px"
-        bar_length="80px"
         bar_thickness="4px"
-        bar_color="#7E7F89"
+        bar_color="#97773E"
+        bar_corner="4px 4px 0 0"
       />
       <SecondsBar
-        outer_height="180px"
-        outer_width="180px"
-        bar_length="120px"
+        outer_height="140px"
+        outer_width="140px"
+        bar_length="90px"
         bar_thickness="2px"
-        bar_color="#7E7F89"
+        bar_color="#97773E"
+        bar_corner="2px 2px 0 0"
       />
       <CenterCap
         width="15px"
         height="15px"
-        background_color="#170F23"
+        background_color="black"
         border_radius="50%"
       />
     </MyDiv>

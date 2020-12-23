@@ -8,7 +8,7 @@ import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
 import styled from "styled-components";
 
-export const BlackMultiFunctionalClock = (properties) => {
+export const LemonThemeClock = (properties) => {
   const MyDiv = styled.div`
     height: ${(properties) => properties.height || "300px"};
     width: ${(properties) => properties.width || "300px"};
@@ -21,53 +21,56 @@ export const BlackMultiFunctionalClock = (properties) => {
   `;
 
   return (
-    <MyDiv className="clock" id="black_multi_functional_clock">
+    <MyDiv className="clock" id="lemon_theme_clock">
       <ClockFrame
         height="200px"
         border_radius="50%"
         width="200px"
         border_size="10px"
-        border_color="black"
+        border_color="#E1EA00"
         shadow
       />
       <ClockBackground
-        height="204px"
+        height="100px"
         border_radius="50%"
-        width="204px"
-        opacity="1"
-        background_color="black"
+        width="100px"
+        opacity="0.6"
+        image_url="images/lemon_background.png"
       />
       <ClockInnerNumberFrame
         height="200px"
         border_radius="50%"
         width="200px"
-        image_url="images/clock.png"
+        image_url="images/lemon_clock_number_frame.png"
       />
       <HoursBar
-        outer_height="140px"
-        outer_width="140px"
-        bar_length="70px"
+        outer_height="120px"
+        outer_width="120px"
+        bar_length="60px"
         bar_thickness="8px"
-        bar_color="#7E7F89"
+        bar_color="#1B1E00"
+        bar_corner="6px 6px 0 0"
       />
       <MinutesBar
         outer_height="160px"
         outer_width="160px"
         bar_length="80px"
         bar_thickness="4px"
-        bar_color="#7E7F89"
+        bar_color="#1B1E00"
+        bar_corner="3px 3px 0 0"
       />
       <SecondsBar
         outer_height="180px"
         outer_width="180px"
         bar_length="120px"
         bar_thickness="2px"
-        bar_color="#7E7F89"
+        bar_color="#1B1E00"
+        bar_corner="2px 2px 0 0"
       />
       <CenterCap
         width="15px"
         height="15px"
-        background_color="#170F23"
+        background_color="#575A00"
         border_radius="50%"
       />
     </MyDiv>

@@ -28,6 +28,7 @@ export const SimpleWhiteBlossomClock = (properties) => {
         width="200px"
         border_size="25px"
         border_color="#1E1E1E"
+        shadow
       />
       <ClockBackground
         height="200px"

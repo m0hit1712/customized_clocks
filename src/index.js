@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { start_clock } from "./start_clock";
 import { SimpleWhiteBlossomClock } from "./clocks/simple_white_blossom_clock";
-import {BlackMultiFunctionalClock} from "./clocks/black_multi_functional_clock";
+import { BlackMultiFunctionalClock } from "./clocks/black_multi_functional_clock";
+import { LemonThemeClock } from "./clocks/lemon_theme_clock";
+import { AncientThemeClock } from "./clocks/ancient_theme_clock";
 
 function Clocks() {
   setTimeout(start_clock(".hr", ".min", ".sec"), 200);
@@ -17,6 +19,14 @@ function Clocks() {
         <div className="grid_item">
           <BlackMultiFunctionalClock></BlackMultiFunctionalClock>
           <p>Multi functional black theme clock</p>
+        </div>
+        <div className="grid_item">
+          <LemonThemeClock></LemonThemeClock>
+          <p>Lemon theme clock</p>
+        </div>
+        <div className="grid_item">
+          <AncientThemeClock/>
+          <p>Ancient Theme Clock</p>
         </div>
         <div id="add_clock">
           <img
