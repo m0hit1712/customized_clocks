@@ -5,11 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #b3a8b0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.grid_item {
+  height: 350px;
+  width: 350px;
+  align-items: start;
+  border-radius: 20px;
+  background-color: white;
+  transition-duration: 0.5s;
+  color: grey;
+}
+
+.grid_item > p{
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+
+.grid_item:hover {
+  background: #dfdbe5;
+  margin-top: -10px;
+  color: black;
 }
 
 .grid {
@@ -18,8 +40,39 @@ code {
   max-width: 1170px;
   display: grid;
   row-gap: 1.5rem;
-  column-gap: 0.5rem;
+  column-gap: 1.5rem;
+  background: transparent;
 }
+
+
+#add_clock {
+  cursor: pointer;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+}
+
+#add_clock > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#add_clock > img{
+  transition-duration: 1s;
+}
+
+#add_clock > img:hover{
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotate(180deg);
+}
+
+#add_clock:hover{
+  background: #dfdbe5;
+  margin-top: -10px;
+}
+
 
 @media screen and (min-width: 900px) {
   .grid {

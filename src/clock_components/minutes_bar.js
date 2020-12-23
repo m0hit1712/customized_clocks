@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import "./css/bars.css";
 
 export const MinutesBar = (properties) => {
   const MyDiv = styled.div`
     height: ${properties.outer_height};
     width: ${properties.outer_width};
-    display: "flex";
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;

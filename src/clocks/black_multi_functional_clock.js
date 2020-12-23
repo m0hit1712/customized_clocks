@@ -8,10 +8,10 @@ import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
 import styled from "styled-components";
 
-export const SimpleWhiteBlossomClock = (properties) => {
+export const BlackMultiFunctionalClock = (properties) => {
   const MyDiv = styled.div`
-    height: ${properties => properties.height || "300px"};
-    width: ${properties => properties.width || "300px"};
+    height: ${(properties) => properties.height || "300px"};
+    width: ${(properties) => properties.width || "300px"};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,21 +21,20 @@ export const SimpleWhiteBlossomClock = (properties) => {
   `;
 
   return (
-    <MyDiv className="clock" id="simple_white_blossom_clock">
+    <MyDiv className="clock" id="black_multi_functional_clock">
       <ClockFrame
         height="200px"
         border_radius="50%"
         width="200px"
-        border_size="25px"
-        border_color="#1E1E1E"
+        border_size="10px"
+        border_color="black"
       />
       <ClockBackground
-        height="200px"
+        height="204px"
         border_radius="50%"
-        width="200px"
-        opacity="0.6"
-        image_url="images/blossom_leafs.png"
-        background_color="white"
+        width="204px"
+        opacity="1"
+        background_color="black"
       />
       <ClockInnerNumberFrame
         height="200px"
@@ -48,29 +47,26 @@ export const SimpleWhiteBlossomClock = (properties) => {
         outer_width="140px"
         bar_length="70px"
         bar_thickness="8px"
-        bar_color="black"
-        bar_corner="6px 6px 0 0"
+        bar_color="#7E7F89"
       />
       <MinutesBar
         outer_height="160px"
         outer_width="160px"
         bar_length="80px"
         bar_thickness="4px"
-        bar_color="black"
-        bar_corner="3px 3px 0 0"
+        bar_color="#7E7F89"
       />
       <SecondsBar
         outer_height="180px"
         outer_width="180px"
         bar_length="120px"
         bar_thickness="2px"
-        bar_color="black"
-        bar_corner="2px 2px 0 0"
+        bar_color="#7E7F89"
       />
       <CenterCap
         width="15px"
         height="15px"
-        background_color="black"
+        background_color="#170F23"
         border_radius="50%"
       />
     </MyDiv>

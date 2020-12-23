@@ -11,6 +11,9 @@ export const ClockFrame = (properties) => {
     border-radius: ${properties.border_radius};
     background-size: cover;
     position: absolute;
+    box-shadow: inset 1px 4px 10px 8px rgba(126, 127, 137, 0.1),
+      5px 5px 12px 2px rgba(0, 0, 0, 0.6);
+    z-index: 10;
   `;
   return <MyDiv id={properties.id} className="clock_outer_frame"></MyDiv>;
 };
