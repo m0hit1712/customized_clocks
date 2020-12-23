@@ -17,6 +17,7 @@ export const SecondsBar = (properties) => {
     display: "flex",
     justifyContent: "center",
     position: "absolute",
+    zIndex: 2,
     "::before": {
       content: "''",
       position: "absolute",

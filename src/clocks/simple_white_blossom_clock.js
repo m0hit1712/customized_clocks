@@ -6,6 +6,7 @@ import { HoursBar } from "../clock_components/hours_bar";
 import { MinutesBar } from "../clock_components/minutes_bar";
 import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
+import { TimeInnerAnalog } from "../clock_components/time_inner_analog";
 import styled from "styled-components";
 
 export const SimpleWhiteBlossomClock = (properties) => {
@@ -74,6 +75,15 @@ export const SimpleWhiteBlossomClock = (properties) => {
         background_color="black"
         border_radius="50%"
       />
+      <TimeInnerAnalog
+        height="30px"
+        width="80px"
+        color="#E372A0"
+        background_color="black"
+        inner_border_color="white"
+        font_size="18px"
+        top="80px"
+      ></TimeInnerAnalog>
     </MyDiv>
   );
 };

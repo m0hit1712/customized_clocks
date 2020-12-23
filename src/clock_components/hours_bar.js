@@ -16,6 +16,7 @@ export const HoursBar = (properties) => {
       width: properties.outer_width,
       display: "flex",
       justifyContent: "center",
+      zIndex: 2,
       "::before": {
         content: "''",
         position: "absolute",

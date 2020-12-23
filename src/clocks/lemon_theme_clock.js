@@ -42,6 +42,7 @@ export const LemonThemeClock = (properties) => {
         border_radius="50%"
         width="200px"
         image_url="images/lemon_clock_number_frame.png"
+        background_color="white"
       />
       <HoursBar
         outer_height="120px"

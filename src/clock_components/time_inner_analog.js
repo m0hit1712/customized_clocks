@@ -1,17 +1,59 @@
 import React from "react";
 import styled from "styled-components";
+import "./css/fonts_loaded.css";
+
 
 export const TimeInnerAnalog = (properties) => {
-         const MyDiv = styled.div`
-           height: ${properties.outer_height};
-           width: ${properties.outer_width};
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           position: absolute;
-         `;
-        
-        return (<MyDiv>
-                
-        </MyDiv>)
+
+  var font_family = "analog";
+  if(properties.font_family)
+  {
+    font_family = properties.font_family;
+  }
+
+  const MyDiv = styled.div`
+    height: ${properties.height};
+    width: ${properties.width};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: ${properties.background_color};
+    color: ${properties.color};
+    margin-top: ${properties.top};
+    margin-left: ${properties.left};
+    z-index: 1;
+    font-family: ${font_family};
+    font-size: ${properties.font_size};
+    font-weight: bold;
+  `;
+
+  const InnerMyDiv = styled.div`
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    box-shadow: inset 1px 4px 10px 8px rgba(126, 127, 137, 0.2);
+  `;
+
+  const Item = styled.div`
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    border 1px solid ${properties.inner_border_color};
+  `;
+
+
+  return (
+    <MyDiv>
+      <InnerMyDiv className="analog_board">
+        <Item className="hour_analog"></Item>
+        <Item className="minute_analog"></Item>
+        <Item className="second_analog"></Item>
+      </InnerMyDiv>
+    </MyDiv>
+  );
 };

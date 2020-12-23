@@ -34,9 +34,47 @@ export function start_clock(hr_s, min_s, sec_s, analog_s) {
 
       for (let i = 0; i < analog.length; i++) {
         analog[i].children[0].innerHTML = ana_hr;
-        analog[i].children[1].innerHTML = " : " + ana_min;
-        analog[i].children[2].innerHTML = " : " + ana_sec;
+        analog[i].children[1].innerHTML = ana_min;
+        analog[i].children[2].innerHTML = ana_sec;
       }
     }
-  }, 500);
+    initialize_date_and_day();
+  }, 100);
+}
+
+export function initialize_date_and_day() {
+  let time = new Date();
+  var days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  var dd = String(time.getDate()).padStart(2, "0");
+  var mm = String(time.getMonth() + 1).padStart(2, "0");
+  var day = days[time.getDay()];
+  
+  var for_dd = document.getElementsByClassName("dd_analog");
+  var for_mm = document.getElementsByClassName("mm_analog");
+  var for_day = document.getElementsByClassName("day_analog");
+
+
+  if (for_dd) {
+    for (let i = 0; i < for_dd.length; i++) {
+      for_dd[i].innerHTML = dd;
+    }
+  }
+  if (for_mm) {
+    for (let i = 0; i < for_mm.length; i++) {
+      for_mm[i].innerHTML = mm;
+    }
+  }
+  if (for_day) {
+    for (let i = 0; i < for_day.length; i++) {
+      for_day[i].innerHTML = day.slice(0,2).toUpperCase();
+    }
+  }
 }

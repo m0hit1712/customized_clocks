@@ -10,6 +10,7 @@ export const ClockInnerNumberFrame = (properties) => {
     border-radius: ${properties.border_radius};
     background-size: cover;
     position: absolute;
+    background-color: ${properties.background_color};
   `;
 
 return <MyDiv id={properties.id} className="clock_inner_frame"></MyDiv>;

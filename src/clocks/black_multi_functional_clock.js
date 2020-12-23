@@ -6,6 +6,9 @@ import { HoursBar } from "../clock_components/hours_bar";
 import { MinutesBar } from "../clock_components/minutes_bar";
 import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
+import { TimeInnerAnalog } from "../clock_components/time_inner_analog";
+import { DayInnerAnalog } from "../clock_components/day_inner_analog";
+import { DateInnerAnalog } from "../clock_components/date_inner_analog";
 import styled from "styled-components";
 
 export const BlackMultiFunctionalClock = (properties) => {
@@ -69,6 +72,38 @@ export const BlackMultiFunctionalClock = (properties) => {
         height="15px"
         background_color="#170F23"
         border_radius="50%"
+      />
+      <TimeInnerAnalog
+        height="30px"
+        width="80px"
+        background_color="black"
+        inner_border_color="grey"
+        top="-60px"
+        color="red"
+        font_size="13px"
+        font_family="analog2"
+      />
+      <DayInnerAnalog
+        height="25px"
+        width="25px"
+        background_color="black"
+        inner_border_color="grey"
+        top="60px"
+        left="60px"
+        color="red"
+        font_size="10px"
+        font_family="analog2"
+      />
+      <DateInnerAnalog
+        height="25px"
+        width="60px"
+        background_color="black"
+        inner_border_color="grey"
+        top="60px"
+        left="-40px"
+        color="red"
+        font_size="10px"
+        font_family="analog2"
       />
     </MyDiv>
   );
