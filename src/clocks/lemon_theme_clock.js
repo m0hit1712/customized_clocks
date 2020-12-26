@@ -6,7 +6,9 @@ import { HoursBar } from "../clock_components/hours_bar";
 import { MinutesBar } from "../clock_components/minutes_bar";
 import { SecondsBar } from "../clock_components/seconds_bar";
 import { CenterCap } from "../clock_components/center_cap";
+import { ClockBackgroundImage } from "../clock_components/clock_background_image";
 import styled from "styled-components";
+
 
 export const LemonThemeClock = (properties) => {
   const MyDiv = styled.div`
@@ -31,10 +33,17 @@ export const LemonThemeClock = (properties) => {
         shadow
       />
       <ClockBackground
+        height="200px"
+        border_radius="50%"
+        width="200px"
+        opacity="0.6"
+        background_color="white"
+      />
+      <ClockBackgroundImage 
         height="100px"
         border_radius="50%"
         width="100px"
-        opacity="0.6"
+        opacity="0.6"           
         image_url="images/lemon_background.png"
       />
       <ClockInnerNumberFrame
@@ -42,7 +51,6 @@ export const LemonThemeClock = (properties) => {
         border_radius="50%"
         width="200px"
         image_url="images/lemon_clock_number_frame.png"
-        background_color="white"
       />
       <HoursBar
         outer_height="120px"

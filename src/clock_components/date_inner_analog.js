@@ -35,7 +35,7 @@ export const DateInnerAnalog = (properties) => {
   `;
 
   const Item = styled.div`
-    padding: 4px 0;
+    padding: 4px 2px;
     display: flex;
     align-items: center;
     justify-content: center;

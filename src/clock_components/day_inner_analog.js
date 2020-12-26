@@ -35,8 +35,9 @@ export const DayInnerAnalog = (properties) => {
   `;
 
   const Item = styled.div`
-    padding: 4px 0;
+    padding: 4px 2px;
     display: flex;
+    width: inherit;
     align-items: center;
     justify-content: center;
     border 1px solid ${properties.inner_border_color};

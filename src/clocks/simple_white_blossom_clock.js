@@ -1,4 +1,5 @@
 import React from "react";
+import { ClockBackgroundImage } from "../clock_components/clock_background_image";
 import { ClockBackground } from "../clock_components/clock_background";
 import { ClockFrame } from "../clock_components/clock_frame";
 import { ClockInnerNumberFrame } from "../clock_components/clock_inner_number_frame";
@@ -36,8 +37,14 @@ export const SimpleWhiteBlossomClock = (properties) => {
         border_radius="50%"
         width="200px"
         opacity="0.6"
-        image_url="images/blossom_leafs.png"
         background_color="white"
+      />
+      <ClockBackgroundImage
+        height="200px"
+        border_radius="50%"
+        width="200px"
+        opacity="0.6"
+        image_url="images/blossom_leafs.png"
       />
       <ClockInnerNumberFrame
         height="200px"

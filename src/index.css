@@ -13,7 +13,7 @@ code {
     monospace;
 }
 .grid_item {
-  height: 350px;
+  height: 390px;
   width: 350px;
   align-items: center;
   display: flex;

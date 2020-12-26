@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ClockInnerNumberFrame = (properties) => {
-  //properties contain = id, height, width, border_radius ,image_url
+export const ClockBackgroundImage = (properties) => {
+  //properties contain = id, height, width, image_url, background-color, border_radius
   const MyDiv = styled.div`
     background: url(${properties.image_url});
     height: ${properties.height};
@@ -10,12 +10,8 @@ export const ClockInnerNumberFrame = (properties) => {
     border-radius: ${properties.border_radius};
     background-size: cover;
     position: absolute;
-    background-color: ${properties.background_color};
-    z-index: 2;
+    z-index: 1;
   `;
 
-return <MyDiv id={properties.id} className="clock_inner_frame"></MyDiv>;
-
-
+  return <MyDiv id={properties.id} className="clock_background_image"></MyDiv>;
 };
-

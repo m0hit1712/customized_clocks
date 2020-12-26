@@ -80,7 +80,7 @@ export const BlackMultiFunctionalClock = (properties) => {
         inner_border_color="grey"
         top="-60px"
         color="red"
-        font_size="13px"
+        font_size="12px"
         font_family="analog2"
       />
       <DayInnerAnalog
