@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #data 
-/publc/clocks_data.json
+/public/clocks_data.json
