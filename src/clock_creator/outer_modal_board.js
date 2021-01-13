@@ -1,22 +1,22 @@
 import React from "react";
 import "./outer_model_board.css";
-import styled from "styled-components";
+//import styled from "styled-components";
 
 export const OuterModalBoard = (properties) => {
-
-  window.onclick = () => {
-    document.getElementById("myModal").style.display = "none";
-  }
-
-  const MyDiv = styled.div`
-    display: ${properties.display};
-  ` 
+    const Toggle = () => {
+      properties.toggler()
+    };
   return (
-    <MyDiv id="myModal" className="modal">
+    <div id="myModal" className="modal" style={{display: properties.display}}>
       <div className="modal-content">
-        <span className="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <span className="close" onClick={Toggle}>&times;</span>
+        <div id="creator_board">
+          <div id="assemble_canvas">           
+          </div>
+          <div id="option_box">
+          </div>
+        </div>
       </div>
-    </MyDiv>
+    </div>
   );
 };

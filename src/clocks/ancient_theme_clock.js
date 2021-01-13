@@ -16,7 +16,7 @@ export const AncientThemeClock = (properties) => {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: ${properties.background_color};
+    background-color: ${properties.background_color}; 
     transition-duration: 0.5s;
   `;
 
