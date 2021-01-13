@@ -11,6 +11,8 @@
         background-color: ${properties.background_color}; 
         transition-duration: 0.5s;",
       "creators_name": "Mohit Patidar",
+      "username": "mohit1712",
+      "password": "pass",
       "components": [
         {
           "component_name": "ClockFrame",
