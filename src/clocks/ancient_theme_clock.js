@@ -33,7 +33,6 @@ export const AncientThemeClock = (properties) => {
         height="190px"
         border_radius="50%"
         width="190px"
-        opacity="1"
         background_color="transparent"
       />
       <ClockInnerNumberFrame
