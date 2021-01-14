@@ -3,28 +3,26 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { start_clock } from "./start_clock";
 import { OuterModalBoard } from "./clock_creator/outer_modal_board";
-import { ClockObjects } from "./clock_renderer/dynamic_renderer"
+import { ClockObjects } from "./clock_renderer/dynamic_renderer";
+import { shuffle } from "./libraries/shuffle";
 
 function Clocks() {
   setTimeout(start_clock(".hr", ".min", ".sec", "analog_board"), 400);
   const list = ClockObjects();
-  console.log(list)
+  console.log(list);
   const [ShowBoard, SetBoardDisplay] = useState(false);
   const ChangeBoardDisplay = () => {
-    if (ShowBoard === false)
-    {
+    if (ShowBoard === false) {
       SetBoardDisplay(true);
+    } else {
+      SetBoardDisplay(false);
     }
-    else
-    {
-      SetBoardDisplay(false)
-    }
-  } 
-  const elements = []
-  for(let i in list)
-  {
+  };
+  var elements = [];
+  for (let i in list) {
     elements.push(<div className="grid_item">{list[i]}</div>);
   }
+  elements = shuffle(elements);
   return (
     <section>
       <div className="grid">

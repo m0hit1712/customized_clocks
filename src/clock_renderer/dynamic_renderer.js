@@ -11,40 +11,42 @@ import { DayInnerAnalog } from "../clock_components/day_inner_analog";
 import { DateInnerAnalog } from "../clock_components/date_inner_analog";
 import { ClockBackgroundImage } from "../clock_components/clock_background_image";
 import styled from "styled-components";
-import data from "../json_data/clocks_data.json"
+import data from "../json_data/clocks_data.json";
 
 export const ClockObjects = () => {
   const clocks_list = [];
   data.map((detail, index) => {
-    var clock = Assembler(detail)
+    var clock = Assembler(detail);
     clocks_list.push(clock);
     return true;
-  })
+  });
   return clocks_list;
-};  
+};
 
 export const Assembler = (clock) => {
-  const outer_style = clock["outer_div"]
-  const MyDiv = styled.div`${outer_style}`;
-  const components = clock["components"]
+  const outer_style = clock["outer_div"];
+  const MyDiv = styled.div`
+    ${outer_style}
+  `;
+  const components = clock["components"];
   if ("ClockFrame" in components) {
-    let properties = components["ClockFrame"]
-    let height = properties["height"]
-    let border_radius = properties["border_radius"]
-    let width = properties["width"]
-    let border_size = properties["border_size"]
-    let image_url = properties["image_url"]
-    let border_color = properties["border_color"]
-    let shadow = properties["shadow"]
+    let properties = components["ClockFrame"];
+    let height = properties["height"];
+    let border_radius = properties["border_radius"];
+    let width = properties["width"];
+    let border_size = properties["border_size"];
+    let image_url = properties["image_url"];
+    let border_color = properties["border_color"];
+    let shadow = properties["shadow"];
     var clock_frame = (
-      <ClockFrame 
-      height={height}
-      border_radius={border_radius}
-      width={width}
-      border_size={border_size}
-      image_url={image_url}
-      border_color={border_color}
-      shadow={shadow}
+      <ClockFrame
+        height={height}
+        border_radius={border_radius}
+        width={width}
+        border_size={border_size}
+        image_url={image_url}
+        border_color={border_color}
+        shadow={shadow}
       />
     );
   }
@@ -63,8 +65,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("ClockInnerNumberFrame" in components)
-  {
+  if ("ClockInnerNumberFrame" in components) {
     let properties = components["ClockInnerNumberFrame"];
     let height = properties["height"];
     let border_radius = properties["border_radius"];
@@ -81,8 +82,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("HoursBar" in components)
-  {
+  if ("HoursBar" in components) {
     let properties = components["HoursBar"];
     let outer_height = properties["outer_height"];
     let outer_width = properties["outer_width"];
@@ -92,12 +92,12 @@ export const Assembler = (clock) => {
     let bar_corner = properties["bar_corner"];
     var hours_bar = (
       <HoursBar
-        outer_height = {outer_height}
-        outer_width = {outer_width}
-        bar_length = {bar_length}
-        bar_thickness = {bar_thickness}
-        bar_color = {bar_color}
-        bar_corner = {bar_corner}
+        outer_height={outer_height}
+        outer_width={outer_width}
+        bar_length={bar_length}
+        bar_thickness={bar_thickness}
+        bar_color={bar_color}
+        bar_corner={bar_corner}
       />
     );
   }
@@ -171,11 +171,11 @@ export const Assembler = (clock) => {
         width={width}
         background_color={background_color}
         inner_border_color={inner_border_color}
-        top = {top}
+        top={top}
         left={left}
-        color = {color}
-        font_size = {font_size}
-        font_family = {font_family}
+        color={color}
+        font_size={font_size}
+        font_family={font_family}
       />
     );
   }
@@ -246,19 +246,19 @@ export const Assembler = (clock) => {
       />
     );
   }
-    return (
-      <MyDiv className="clock">
-        {clock_frame}
-        {clock_background}
-        {clock_background_image}
-        {clock_inner_number_frame}
-        {hours_bar}
-        {minutes_bar}
-        {seconds_bar}
-        {center_cap}
-        {time_inner_analog}
-        {day_inner_analog}
-        {date_inner_analog}
-      </MyDiv>
-    );
+  return (
+    <MyDiv className="clock">
+      {clock_frame}
+      {clock_background}
+      {clock_background_image}
+      {clock_inner_number_frame}
+      {hours_bar}
+      {minutes_bar}
+      {seconds_bar}
+      {center_cap}
+      {time_inner_analog}
+      {day_inner_analog}
+      {date_inner_analog}
+    </MyDiv>
+  );
 };
