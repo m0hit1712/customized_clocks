@@ -16,14 +16,14 @@ import data from "../json_data/clocks_data.json";
 export const ClockObjects = () => {
   const clocks_list = [];
   data.map((detail, index) => {
-    var clock = Assembler(detail);
+    var clock = Assembler(detail, index);
     clocks_list.push(clock);
     return true;
   });
   return clocks_list;
 };
 
-export const Assembler = (clock) => {
+export const Assembler = (clock, key) => {
   const outer_style = clock["outer_div"];
   const MyDiv = styled.div`
     ${outer_style}
@@ -50,7 +50,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("ClockBackground" in components) {
+  if (components["ClockBackground"]["display"]) {
     let properties = components["ClockBackground"];
     let height = properties["height"];
     let border_radius = properties["border_radius"];
@@ -65,7 +65,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("ClockInnerNumberFrame" in components) {
+  if (components["ClockInnerNumberFrame"]["display"]) {
     let properties = components["ClockInnerNumberFrame"];
     let height = properties["height"];
     let border_radius = properties["border_radius"];
@@ -82,7 +82,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("HoursBar" in components) {
+  if (components["HoursBar"]["display"]) {
     let properties = components["HoursBar"];
     let outer_height = properties["outer_height"];
     let outer_width = properties["outer_width"];
@@ -101,7 +101,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("MinutesBar" in components) {
+  if (components["MinutesBar"]["display"]) {
     let properties = components["MinutesBar"];
     let outer_height = properties["outer_height"];
     let outer_width = properties["outer_width"];
@@ -120,7 +120,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("SecondsBar" in components) {
+  if (components["SecondsBar"]["display"]) {
     let properties = components["SecondsBar"];
     let outer_height = properties["outer_height"];
     let outer_width = properties["outer_width"];
@@ -139,7 +139,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("CenterCap" in components) {
+  if (components["CenterCap"]["display"]) {
     let properties = components["CenterCap"];
     let height = properties["height"];
     let border_radius = properties["border_radius"];
@@ -154,7 +154,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("TimeInnerAnalog" in components) {
+  if (components["TimeInnerAnalog"]["display"]) {
     let properties = components["TimeInnerAnalog"];
     let height = properties["height"];
     let width = properties["width"];
@@ -179,7 +179,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("DayInnerAnalog" in components) {
+  if (components["DayInnerAnalog"]["display"]) {
     let properties = components["DayInnerAnalog"];
     let height = properties["height"];
     let width = properties["width"];
@@ -204,7 +204,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("DateInnerAnalog" in components) {
+  if (components["DateInnerAnalog"]["display"]) {
     let properties = components["DateInnerAnalog"];
     let height = properties["height"];
     let width = properties["width"];
@@ -229,7 +229,7 @@ export const Assembler = (clock) => {
       />
     );
   }
-  if ("ClockBackgroundImage" in components) {
+  if (components["ClockBackgroundImage"]["display"]) {
     let properties = components["ClockBackgroundImage"];
     let height = properties["height"];
     let border_radius = properties["border_radius"];
@@ -247,7 +247,7 @@ export const Assembler = (clock) => {
     );
   }
   return (
-    <MyDiv className="clock">
+    <MyDiv className="clock" key={key}>
       {clock_frame}
       {clock_background}
       {clock_background_image}
